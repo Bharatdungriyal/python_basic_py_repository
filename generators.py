@@ -31,3 +31,17 @@ One of the main benefits of generators is that they allow you to generate the va
 """ Another benefit of generators is that they are lazy, which means that the values are generated 
 only when they are requested. This allows you to generate the values in a more efficient and memory-friendly 
 manner, as you don't have to generate all the values up front."""
+
+
+def topten():
+    n=1
+
+    while n<=10:
+        sq=n*n
+        yield sq
+        n=n+1
+
+value = topten()
+
+for i in value:
+    print(i)
